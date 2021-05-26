@@ -15,8 +15,10 @@
         }
         $(document).ready(function () {
             $('#large_box').click(function () {
-                $("div").css({"background-color":random_color()});
+                // $("div").css({"background-color":random_color()});
                 alert('you clicked the big box!');
+                $('#large_box').children().css({"background-color":random_color()});
+                $('#large_box').children().parent().css({"background-color":random_color()});
                 //comenta esto cuando hayas averiguado para qué se utiliza event.stopPropagation: lo que esta dentro del div no se expande para afuera 
             })
             $('.side_box').click(function (event) {
